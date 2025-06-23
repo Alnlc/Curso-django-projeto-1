@@ -1,9 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt_br">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
-    <title> Receitas da Vovó</title>
+    <title> Restaurante & Bistro</title>
+        <!--Fonte LeckerLi One -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
+
+    <!-- Fonte Inter-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..
+        900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <!-- Libs font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/solid.min.css" ... />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css" ... />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/fontawesome.min.css"
         integrity="sha512-aP4LyQwPu7DAUAgYHVE2zZ0ZG02lDMcWtIsMG1H6VhvPICHEgy2RqF0igO8kCz+EuHmoxLekNvddm3g5VuPNfQ=="
@@ -16,7 +30,56 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
-        * {
+        :root {
+            /* --- Primary Colors (6 variations) --- */
+            /* Base is the main color, others are variations */
+            --color-primary-base: #0D6EFD;
+            --color-primary-hover: #0B5ED7;
+            --color-primary-dark: #03285A;
+            --color-primary-dark-hover: #021F45;
+            --color-primary-light: #ACCBFF;
+            --color-primary-light-hover: #8AB5FF;
+
+            /* --- Light Informational Colors (7 categories) --- */
+            /* These are light-valued colors, good for text on dark backgrounds or as element backgrounds */
+            --color-text-light: #ECECEC;
+            --color-info-light: #A8D5FF;
+            --color-debug-light: #D4C2FF;
+            --color-success-light: #A3E6A3;
+            --color-alert-light: #FFCBA4;
+            --color-warning-light: #FFF0A3;
+            --color-error-light: #FFAAAA;
+
+            /* --- Dark Informational Colors (7 categories) --- */
+            /* These are dark-valued colors, good for text on light backgrounds or as accent colors */
+            --color-text-dark: #333333;
+            --color-info-dark: #0056B3;
+            --color-debug-dark: #5A3E9A;
+            --color-success-dark: #198754;
+            --color-alert-dark: #D97100;
+            --color-warning-dark: #B38B00;
+            --color-error-dark: #DC3545;
+
+            /* --- Grayscale (White to Black) --- */
+            /* An 11-step scale, including pure white and pure black */
+            --color-white: #FFFFFF;
+            --color-gray-100: #F8F9FA;
+            --color-gray-200: #E9ECEF;
+            --color-gray-300: #DEE2E6;
+            --color-gray-400: #CED4DA;
+            --color-gray-500: #ADB5BD;
+            --color-gray-600: #6C757D;
+            --color-gray-700: #495057;
+            --color-gray-800: #343A40;
+            --color-gray-900: #212529;
+            --color-black: #000000;
+            --font-primary:'Inter', sans-serif;
+            --font-headings:'Leckerli One', serif;
+
+            --spacing-gutter--medium: 3rem;
+            --spacing-gutter-large: 4rem;
+        }
+                * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
@@ -27,7 +90,92 @@
         }
 
         body {
-            font: size 1.6rem;
+            font-size: 1.6rem;
+            font-family: var(--font-primary);
+            background: var(--color-gray-400) ;
         }
-    </style>
+
+        .container {;
+            max-width: 144rem;
+            margin: 0 auto;
+            padding: var(--spacing-gutter-large);
+
+        }
+
+        .main-header-container {
+            background: var(--color-primary-dark);
+        }
+        .main-logo {
+            font-family: var(--font-headings);
+            color: var(--color-white);
+            font-size: 4rem;
+            text-decoration:none;
+            display: flow;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: center;
+            width: fit-content;
+            margin: 0 auto;
+        }
+        .search-form {
+            border: .2rem solid var(--color-primary-dark);
+            max-width: 64rem;
+            background: var(--color-gray-200);
+            margin: auto;
+            border-radius: .2rem ;
+            position: relative;
+        }
+        .search-input, .search-button{
+            border: none;
+            background: none;
+            outline: none;
+            padding: 1rem;
+        }
+        .search-input {
+            width: 100%;
+            padding-right:2.5rem ;
+        }
+        .search-button {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .search-button:focus-within{
+            outline: 1px solid var(--color-primary-base);
+            background: var(--color-gray-500) ;
+
+        }
+        .search-form:focus-within .search-button{
+            color: var(--color-primary-base);
+            background: white;
+        }
+        .search-form:focus-within{
+            border-color: var(--color-primary-base);
+            background: white;
+        }
+
+        .square-container {
+            width: 180rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10%;
+            gap: 1rem;
+
+        }
+        #item1, #item2, #item3,#item4,#item5,#item6{
+            border: 1px solid black;
+            --spacing-gutter-large: var(--spacing-gutter--medium);
+            padding: 24px;
+            justify-content: space-between;
+            display: inline-block;
+            vertical-align: top;
+            width:40rem;
+            height:50rem;
+            background:linear-gradient(var(--color-info-light),var(--color-info-dark));
+            vert-align: top;
+
+        }
+        </style>
 </head>
