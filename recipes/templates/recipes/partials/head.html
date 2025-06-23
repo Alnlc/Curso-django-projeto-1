@@ -21,7 +21,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/fontawesome.min.css"
         integrity="sha512-aP4LyQwPu7DAUAgYHVE2zZ0ZG02lDMcWtIsMG1H6VhvPICHEgy2RqF0igO8kCz+EuHmoxLekNvddm3g5VuPNfQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+     '   crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/brands.min.css"
         integrity="sha512-9klWNy/fjh4XVpd8qMsqavcvhfb/ltKN3MYwT127TsxwWiJWl183vRinW2yvznVJ5u0Nhcc1YDQvCoPtfh+p/A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -110,12 +110,13 @@
             color: var(--color-white);
             font-size: 4rem;
             text-decoration:none;
-            display: flow;
+            display: flex;
             flex-flow: row nowrap;
             align-items: center;
             justify-content: center;
             width: fit-content;
             margin: 0 auto;
+            text-shadow: 10px 10px 10px black;
         }
         .search-form {
             border: .2rem solid var(--color-primary-dark);
@@ -155,26 +156,39 @@
         }
 
         .square-container {
-            width: 180rem;
+            width: 100%;
+            margin: 0 auto;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
             border-radius: 10%;
-            gap: 1rem;
+            gap: 10rem;
 
         }
-        #item1, #item2, #item3,#item4,#item5,#item6{
-            border: 1px solid black;
+        .itens {
+             border: 1px solid black;
             --spacing-gutter-large: var(--spacing-gutter--medium);
             padding: 24px;
             justify-content: space-between;
             display: inline-block;
             vertical-align: top;
-            width:40rem;
-            height:50rem;
+            position: relative;
+            width:30rem;
+            height:40rem;
             background:linear-gradient(var(--color-info-light),var(--color-info-dark));
             vert-align: top;
+            box-shadow:10px 10px 10px var(--color-gray-600), -10px -10px 10px var(--color-gray-600);
+            animation-name: hover-iten;
+            animation: ease-in;
+
+
+        }
+        .itens:hover {
+            background: linear-gradient(var(--color-info-dark), var(--color-info-light));
+            transform: scale(110%);
+        }
+        #d1 {
 
         }
         </style>
