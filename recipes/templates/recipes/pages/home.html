@@ -1,22 +1,19 @@
 {%include 'recipes/partials/head.html'%}
 
-<body>
      {% include 'recipes/partials/header.html' %}
-    <div class="search-container">
-        <div class="container">
-            <form action="" class="search-form">
-                <input type="search" class="search-input" name="search">
-                 <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
+     {% include 'recipes/partials/search.html' %}
 
-            </form>
-        </div>
-    <div class="square-container">
-        <div class="itens">A</div>
-        <div class="itens">B</div>
-        <div class="itens">C</div>
-        <div class="itens">D</div>
-        <div class="itens">E</div>
-        <div class="itens">F</div>
-        <div class="itens">G</div>
+
+     <main class="main-content-conteiner">
+         <div class="main-content main-content-list container">
+            {% include 'recipes/partials/recipe.html' %}
+             {% include 'recipes/partials/recipe.html' %}
+             {% include 'recipes/partials/recipe.html' %}
+         </div>
+
+     </main>
+    {% include 'recipes/partials/footer.html' %}
+
+</body>
 
 </html>
